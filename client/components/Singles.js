@@ -14,6 +14,8 @@ const Single = React.createClass({
     // console.log(post);
 
     const postComments = this.props.comments[postId] || [];
+    // video 14 it will allow us to loop over nothing const postComments = this.props.comments[postId] || [];
+
 
     return (
       <div className="single-photo">
