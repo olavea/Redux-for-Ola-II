@@ -8,8 +8,20 @@
 // Ok let me see -> we add comments or likes
 // return a brand new copy, an updated copy of our store/state -> returns the updated copy of our store
 
+// Video 9 how do we hook the two up?
+// what do you dispatch? You actually just dispatch an action, an object like this:
+// {
+//     type: 'INCREMENT_LIKES',
+//     index
+//   }
+// in the console
+// why is comments running?
+// This is fundamentalism
+// every time we dispatch an action every reducer is going to run <away> illuSketchNote
+// if something is going to happen in state is up to you, but first see something
 
 function posts(state = [], action) {
+  console.log("The post will change");
   console.log(state, action);
   return state;
 }
