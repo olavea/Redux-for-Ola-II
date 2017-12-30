@@ -21,4 +21,14 @@ const store = createStore(rootReducer, defaultState);
 export const history = syncHistoryWithStore(browserHistory, store);
 // we take the browserHistory and we are going to weave in the actual store
 
+if(module.hot) {
+  module.hot.accept('./reducers/',() => {
+    const nextRootReducer = require('./reducers/index').default;
+    store.replaceReducer(nextRootReducer);
+  });
+}
+
+
+
+
 export default store;
